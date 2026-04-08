@@ -47,13 +47,29 @@
                 <input type="number" id="t_amb" value="45" oninput="calculate()">
             </div>
 
-            <div class="group">
-                <label>LAYOUT POSA</label>
-                <select id="layout" onchange="calculate()">
-                    <option value="trifoglio">Trifoglio (Ottimizzato)</option>
-                    <option value="piano">In Piano (Distanziati)</option>
-                </select>
-            </div>
+            
+<div class="group">
+    <label>CONFIGURAZIONE POSA (MODELLAZIONE GEOMETRICA)</label>
+    <div class="pose-selector">
+        <input type="radio" name="pose" id="p1" value="trifoglio" checked onchange="calculate()">
+        <label for="p1" class="pose-card">
+            <div class="pose-img-placeholder">☘️</div>
+            <span>Trifoglio (IEC 60287)</span>
+        </label>
+
+        <input type="radio" name="pose" id="p2" value="piano" onchange="calculate()">
+        <label for="p2" class="pose-card">
+            <div class="pose-img-placeholder">平行</div>
+            <span>In Piano (Distanziati)</span>
+        </label>
+
+        <input type="radio" name="pose" id="p3" value="batteria" onchange="calculate()">
+        <label for="p3" class="pose-card highlight">
+            <div class="pose-img-placeholder">🔳</div>
+            <span>Batteria Multifisica</span>
+        </label>
+    </div>
+</div>
 
             <button class="btn-main" onclick="generatePDF()">GENERA REPORT ESECUTIVO</button>
         </div>

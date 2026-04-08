@@ -1,0 +1,108 @@
+:root {
+    --primary: #00d2ff;
+    --accent: #ff4b2b;
+    --bg: #0b0e14;
+    --card: #161b22;
+    --text: #f0f6fc;
+    --success: #238636;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 15px;
+}
+
+.dashboard {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.logo-area {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline { font-size: 9px; color: #8b949e; margin-top: 4px; text-transform: uppercase; }
+
+h2 { font-size: 1rem; color: #8b949e; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; border: none; }
+
+.group { margin-bottom: 18px; }
+
+label {
+    display: block;
+    font-size: 0.75rem;
+    color: #8b949e;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+select, input {
+    width: 100%;
+    padding: 11px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.val-display { text-align: right; font-size: 12px; color: var(--primary); margin-top: 5px; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+
+.stat-card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid #30363d;
+}
+
+.stat-card.active { border-top-color: var(--primary); }
+
+.stat-val { font-size: 1.4rem; font-weight: 800; display: block; margin-bottom: 4px; }
+
+.stat-label { font-size: 0.65rem; color: #8b949e; font-weight: bold; }
+
+.canvas-area { background: #000; border-radius: 12px; border: 1px solid #30363d; }
+
+canvas { width: 100%; display: block; border-radius: 8px; }
+
+.btn-main {
+    background: var(--success);
+    color: white;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.danger { color: var(--accent) !important; border-top-color: var(--accent) !important; }

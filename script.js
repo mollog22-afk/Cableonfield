@@ -88,3 +88,55 @@ async function generatePDF() {
     doc.save("Cableonfield_Report.pdf");
 }
 updateUI();
+/* --- NUOVO SELETTORE VISIVO --- */
+.pose-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.pose-selector input[type="radio"] {
+    display: none; /* Nasconde il pallino standard */
+}
+
+.pose-card {
+    background: #0d1117;
+    border: 2px solid #30363d;
+    border-radius: 8px;
+    padding: 12px 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pose-img-placeholder {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.pose-card span {
+    font-size: 9px;
+    color: #8b949e;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Effetto Selezione */
+.pose-selector input[type="radio"]:checked + .pose-card {
+    border-color: var(--primary);
+    background: rgba(0, 210, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.15);
+}
+
+.pose-selector input[type="radio"]:checked + .pose-card span {
+    color: var(--primary);
+}
+
+.pose-card.highlight {
+    border-style: dashed;
+}
+
